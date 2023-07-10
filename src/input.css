@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#menu-nav.show {
+  left: 0;
+}
+
+#home::before {
+  content: "";
+  position: absolute;
+  top: 430px;
+  left: 0px;
+  width: 800px;
+  height: 100%;
+  background-image: url("../images/bg-pattern-intro-left-desktop.svg");
+  background-repeat: no-repeat;
+}
+
+#home::after {
+  content: "";
+  position: absolute;
+  top: -70px;
+  right: -100px;
+  width: 500px;
+  height: 800px;
+  background-image: url("../images/bg-pattern-intro-right-desktop.svg");
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  #home::before {
+    top: 450px;
+    left: 0px;
+    width: 300px;
+    height: 300px;
+    background-image: url("../images/bg-pattern-intro-left-mobile.svg");
+    z-index: 1;
+  }
+  #home::after {
+    top: 800px;
+    right: 0px;
+    width: 125px;
+    height: 350px;
+    background-image: url("../images/bg-pattern-intro-right-mobile.svg");
+    z-index: 20;
+  }
+}
+@media (min-width: 401px) and (max-width: 768px) {
+  #home::before {
+    display: none;
+  }
+}
+
+#cta > div {
+  background-position: right center;
+  background-image: url("../images/bg-pattern-how-we-work-mobile.svg");
+  background-repeat: no-repeat;
+}
+@media (min-width: 767px) {
+  #cta > div {
+    background-image: url("../images/bg-pattern-how-we-work-desktop.svg");
+    background-repeat: no-repeat;
+  }
+}
